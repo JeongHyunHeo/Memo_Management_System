@@ -1,0 +1,16 @@
+*************REPORT*************
+Total the number of USER is 12
+      <USER NICKNAME LIST>      
+USER NAME: Alix, The number of note: 1
+USER NAME: Racan, The number of note: 1
+USER NAME: Vein, The number of note: 1
+USER NAME: Rusian, The number of note: 1
+USER NAME: Kali, The number of note: 1
+USER NAME: Pepe, The number of note: 1
+USER NAME: Ultra, The number of note: 1
+USER NAME: Rupi, The number of note: 1
+USER NAME: Aqua, The number of note: 1
+USER NAME: Hello_World, The number of note: 1
+USER NAME: Kim, The number of note: 1
+USER NAME: Root, The number of note: 1
+*******************************
