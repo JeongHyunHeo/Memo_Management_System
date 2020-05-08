@@ -11,7 +11,7 @@ Recommender: This program that is managed by the administrator serves to store e
 ## Function
 ***
 ### Create
-Create: Create a new data record from a data file	<font color="red"> add_a_record </font> (+load_list) </br>
+Create: Create a new data record from a data file *add_a_record (+load_list) </br>
 Create: Create a new record from the standard input	<font color="red"> take_note </font> (+load_list)	
 
 ### Read
