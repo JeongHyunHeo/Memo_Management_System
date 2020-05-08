@@ -11,21 +11,21 @@ Recommender: This program that is managed by the administrator serves to store e
 ## Function
 ***
 ### Create
-Create: Create a new data record from a data file	*add_a_record* (+load_list) </br>
-Create: Create a new record from the standard input	*take_note* (+load_list)	
+Create: Create a new data record from a data file	<span style="color:red;"> *add_a_record* </span> (+load_list) </br>
+Create: Create a new record from the standard input	<span style="color:red;"> *take_note* </span> (+load_list)	
 
 ### Read
 
-Read: According to user specified conditions, print a record, multiple or all records to the standard output *search_note* </br>		
-Read: Read/write the entire data from/to filesystem	*load_list, *save_information* </br>
-Read: Export the entire data in a report format as a .txt file	*Save_report*	</br>	
+Read: According to user specified conditions, print a record, multiple or all records to the standard output <span style="color:red;"> *search_note* </span></br>		
+Read: Read/write the entire data from/to filesystem	<span style="color:red;"> *load_list </span> , <span style="color:red;"> *save_information* </span> </br>
+Read: Export the entire data in a report format as a .txt file <span style="color:red;"> *Save_report* </span></br>	
 
 ### Update
 
-Update: Update a specific field of a record, multiple or all records *name_change*	
+Update: Update a specific field of a record, multiple or all records <span style="color:red;"> *name_change* </span>
 
 ### Delete
-Delete: Delete a record, multiple or all records	*delete_note*, *delete_user* 
+Delete: Delete a record, multiple or all records	<span style="color:red;"> *delete_note* </span> , <span style="color:red;"> *delete_user* </span>
 
 ### Extra
 
