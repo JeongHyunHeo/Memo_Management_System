@@ -4,6 +4,7 @@
 ***
 
 Purpose: To manage it easy to store and view important information
+
 Recommender: This program that is managed by the administrator serves to store each of the information about the user, manage stored the contents in the database, and show the statistical materials. The manager can use the function (= creating the user, deleting the user, editing the note, finding the user by searching, changing the username, showing each of the statistic materials, storing the data, etc..) if the manager think that this functions will be very useful, I hope the program will be used. 
 
 ***
@@ -25,7 +26,7 @@ Read: Export the entire data in a report format as a .txt file	*Save_report
 Update: Update a specific field of a record, multiple or all records *name_change	
 
 ### Delete
-Delete: Delete a record, multiple or all records	*delete_note, *delete_user	
+Delete: Delete a record, multiple or all records	* delete_note, * delete_user	
 
 ### Extra
 
