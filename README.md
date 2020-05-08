@@ -18,7 +18,7 @@ Create: Create a new record from the standard input	*take_note (+load_list)
 ### Read
 
 Read: According to user specified conditions, print a record, multiple or all records to the standard output *search_note		
-Read: Read/write the entire data from/to filesystem	*load_list, *save_information		
+Read: Read/write the entire data from/to filesystem	*load_list, <span style="color:red"> **save_information </span>		
 Read: Export the entire data in a report format as a .txt file	*Save_report		
 
 ### Update
