@@ -1,5 +1,5 @@
 
-#Mini Project: <Memo_Management_System>
+# Mini Project: <Memo_Management_System>
 
 ***
 
@@ -8,26 +8,26 @@ Recommender: This program that is managed by the administrator serves to store e
 
 ***
 
-##Function
+## Function
 ***
-###Create
+### Create
 Create: Create a new data record from a data file	*add_a_record (+load_list)
 Create: Create a new record from the standard input	*take_note (+load_list)	
 
-###Read
+### Read
 
 Read: According to user specified conditions, print a record, multiple or all records to the standard output *search_note		
 Read: Read/write the entire data from/to filesystem	*load_list, *save_information		
 Read: Export the entire data in a report format as a .txt file	*Save_report		
 
-###Update
+### Update
 
 Update: Update a specific field of a record, multiple or all records *name_change	
 
-###Delete
+### Delete
 Delete: Delete a record, multiple or all records	*delete_note, *delete_user	
 
-###Extra
+### Extra
 
 Extra: Perform a data defragmentation	defragment	
 Extra: Arrange (sort) the order of data records	rank	
