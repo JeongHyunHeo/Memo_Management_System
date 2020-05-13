@@ -2,6 +2,122 @@
 #include <stdlib.h>
 #include <string.h>
 #include "extras.h"
+#include "base.h"
+
+void multiple_search(Record records[], int count) {
+  
+    char name[30];
+    char date[20];
+    int note_count;
+    int selection = 0;
+    int check;
+    int i;
+
+    char field1[20];
+    char field2[20];
+    
+    printf("Enter number of field for search(1~3): ");
+    scanf("%d", &selection);
+
+    if (selection == 1) {
+      search_note(records, count);
+      return;
+    }
+    else if (selection == 2) {
+      printf("Enter two fields for search(name, date, note#): ");
+      scanf("%s %s", field1, field2);
+
+      if (!strcmp(field1, "name") && !strcmp(field2, "date")) { 
+        printf("Enter a user name: ");
+        scanf("%s", name);
+        printf("Enter date: ");
+        scanf("%s", date);
+
+        for (i = 0; i < count; i++) {
+          if(!strcmp(records[i].user_name, name) && !strcmp(records[i].written_date, date)){
+              check = 1;
+              break;
+          }
+        }      
+        if(check == 1){
+            printf("The date: %s\n",records[i].written_date);
+            printf("The content of note <%s>: \n",records[i].user_name);
+            printf("%s\n",records[i].user_content);
+        }else{
+            printf("The user doesn't exist !\n");
+        }
+      }
+      else if (!strcmp(field1, "name") && !strcmp(field2, "note#")) {
+        printf("Enter a user name: ");
+        scanf("%s", name);
+        printf("Enter note count: ");
+        scanf("%d", &note_count);
+
+        for (i = 0; i < count; i++) {
+          if(!strcmp(records[i].user_name, name) && records[i].note_count == note_count){
+              check = 1;
+              break;
+          }
+        }      
+        if(check == 1){
+            printf("The date: %s\n",records[i].written_date);
+            printf("The content of note <%s>: \n",records[i].user_name);
+            printf("%s\n",records[i].user_content);
+        }else{
+            printf("The user doesn't exist !\n");
+        }
+      }     
+      else if (!strcmp(field1, "date") && !strcmp(field2, "note#")) {
+        printf("Enter date: ");
+        scanf("%s", date);
+        printf("Enter note count: ");
+        scanf("%d", &note_count);
+
+        for (i = 0; i < count; i++) {
+          if(!strcmp(records[i].written_date, date) && records[i].note_count == note_count){
+              check = 1;
+              break;
+          }
+        }      
+        if(check == 1){
+            printf("The date: %s\n",records[i].written_date);
+            printf("The content of note <%s>: \n",records[i].user_name);
+            printf("%s\n",records[i].user_content);
+        }else{
+            printf("The user doesn't exist !\n");
+        }
+      }
+    }
+    else if (selection == 3) {
+      printf("Enter a user name: ");
+      scanf("%s", name);
+      printf("Enter date: ");
+      scanf("%s", date);
+      printf("Enter note count: ");
+      scanf("%d", &note_count);
+
+      for (i = 0; i < count; i++) {
+        if(!strcmp(records[i].user_name, name) && !strcmp(records[i].written_date, date) 
+        && records[i].note_count == note_count){
+            check = 1;
+            break;
+        }
+      }      
+      if(check == 1){
+          printf("The date: %s\n",records[i].written_date);
+          printf("The content of note <%s>: \n",records[i].user_name);
+          printf("%s\n",records[i].user_content);
+      }else{
+          printf("The user doesn't exist !\n");
+      }
+    }
+    else {
+      printf("No");
+    }
+    getchar();
+
+  return;
+}
 
 // Function: defragment()
 // Input: record - array of Records; this may contain empty elements in the middle
