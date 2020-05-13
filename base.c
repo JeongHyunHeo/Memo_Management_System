@@ -305,3 +305,30 @@ void save_report(Record records[], int count){
     getchar();
 }
 
+int delete_all(Record records[], int *count){
+	char decision;
+	int i = 0, check = 0;
+	
+	printf("Do you really want to delete all the data?(Yes: Y, No: N)\n");
+	printf("Command>> ");
+	scanf("%c", &decision);
+	
+	if(decision == 'Y' || decision == 'y'){
+		int i = *count;
+		while(i > 0){
+			strncpy(records[i].user_name, "", sizeof(""));
+			strncpy(records[i].written_date, "", sizeof(""));
+			strncpy(records[i].user_content, "", sizeof(""));
+			i--;
+		}
+	}
+	else{
+		//none
+	}
+	remove("User.txt");
+	FILE *p = fopen("User.txt", "wt");
+	fclose(p);
+	*count = 0;
+
+	return *count;
+}

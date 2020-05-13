@@ -65,6 +65,8 @@ void input_handler(char input[], Record records[],int *count){
     categories(records,*count);
   else if (!strcmp(input,"14"))
     multiple_search(records, *count);
+  else if (!strcmp(input,"15"))
+    *count = delete_all(records, count);
   else if(!strcmp(input,"99"))
     printf("Terminating... bye!\n"); // Quit - no operation (an empty statement with a semi-colon)
   else
@@ -98,6 +100,7 @@ void display_menu(){
     printf("12. Show the total statistics\n");
     printf("13. Category by Username\n");
     printf("14. Multiple Search\n");
+    printf("15. Delete All\n");
     printf("99. Exit\n\n");
 }
 

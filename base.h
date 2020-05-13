@@ -14,5 +14,6 @@ void delete_note(Record records[],int count); //5
 int delete_user(Record records[], int *count); //6
 void search_note(Record records[], int count); //7
 void save_information(Record records[], int count); // 9
-void save_report(Record records[], int count); // 10
+void save_report(Record records[], int count); // 1
+int delete_all(Record records[], int *count); // 10
 #endif
