@@ -2,6 +2,57 @@
 #include <stdlib.h>
 #include <string.h>
 #include "extras.h"
+#include "base.h"
+
+void multiple_search(Record records[], int count) {
+  
+    char name[30];
+    char date[20];
+    int note_count;
+    int selection = 0;
+    int check;
+    int i;
+    
+    printf("Enter number of field for search(1~3): ");
+    scanf("%d", &selection);
+
+    if (selection == 1) {
+      search_note(records, count);
+      return;
+    }
+    else if (selection == 2) {
+      printf("2 field");
+    }
+    else if (selection == 3) {
+      printf("Enter a user name: ");
+      scanf("%s", name);
+      printf("Enter date: ");
+      scanf("%s", date);
+      printf("Enter note count: ");
+      scanf("%d", &note_count);
+
+      for (i = 0; i < count; i++) {
+        if(!strcmp(records[i].user_name, name) && !strcmp(records[i].written_date, date) 
+        && records[i].note_count == note_count){
+            check = 1;
+            break;
+        }
+      }      
+      if(check == 1){
+          printf("The date: %s\n",records[i].written_date);
+          printf("The content of note <%s>: \n",records[i].user_name);
+          printf("%s\n",records[i].user_content);
+      }else{
+          printf("The user doesn't exist !\n");
+      }
+    }
+    else {
+      printf("No");
+    }
+    getchar();
+
+  return;
+}
 
 // Function: defragment()
 // Input: record - array of Records; this may contain empty elements in the middle
